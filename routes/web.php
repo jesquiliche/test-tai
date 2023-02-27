@@ -21,6 +21,10 @@ Route::get('/home', function () {
     return view('home')->name('home');
 });
 
+Route::get('/contacto', function(){
+    return view('contacto');
+})->name('contacto');
+
 Route::get('/preguntas', [App\Http\Controllers\PreguntaController::class,'index']);
 
 Route::post('/preguntasbloque', [App\Http\Controllers\PreguntaController::class,'showByBloque'])->name('preguntasbloque');

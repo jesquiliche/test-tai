@@ -37,6 +37,9 @@
             .fas {
                 font-size: 20px;
             }
+            .fab {
+                font-size: 34px;
+            }
             .fa-check {
                 color: rgb(132, 220, 132);
                 font-size: 18px;
@@ -58,9 +61,45 @@
 }
 .cards-container {
   position:absolute;
-  margin-top: -200px;
-  width: 300px;
+  margin-top: -180px;
+  width: 325px;
 }
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.social-icons a {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+}
+
+.social-icons a:hover {
+  color: #1DA1F2;
+}
+
         </style>
     </head>
         <main>
@@ -81,7 +120,7 @@
                       <a class="nav-link" href='{{route('test')}}'><i class="fas fa-book"></i> Test</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contacto</a>
+                      <a class="nav-link" href='{{route('contacto')}}'><i class="fas fa-envelope"></i> Contacto</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fas fa-id-card"></i> Sobre mi</a>
@@ -98,6 +137,14 @@
             </div>
             @yield('content')
         </main>
-      
+        <footer>
+          <h5>Copyrigth Jesús Quintana Esquiliche</h5>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter-square"></i></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+          </ul>
+        </footer>
+        
     
 </html>
