@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pregunta;
+use App\Models\Bloque;
+use App\Models\Categoria;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
+
 
 
 class PreguntaController extends Controller
@@ -15,8 +19,12 @@ class PreguntaController extends Controller
     public function index()
     {
         //
-        $preguntas=Pregunta::paginate();
-        return View('preguntas',compact('preguntas'));
+        $preguntas=DB::table('preguntas')
+        ->inRandomOrder()
+        ->limit(75)
+        ->get();
+        $titulo="Test sobre todo el temario";
+        return View('preguntas',compact('preguntas'),compact('titulo'));
 
     }
 
@@ -24,12 +32,15 @@ class PreguntaController extends Controller
     {
         //
         $categoria_id = $request->input('categoria_id');
+        $categoria=Categoria::findOrfail($categoria_id);
+        $titulo="Tema ".$categoria->nombre;
+
         $preguntas = Pregunta::where('categoria_id',$categoria_id)
                 ->inRandomOrder()
                 ->limit(20)
                 ->get();
 
-        return View('preguntas',compact('preguntas'));
+        return View('preguntas',compact('preguntas'),compact('titulo'));
 
     }
 
@@ -37,12 +48,15 @@ class PreguntaController extends Controller
     {
         //
         $bloque_id = $request->input('bloque_id');
+        $bloque=Bloque::findOrFail($bloque_id);
+
+        $titulo ="Test ".$bloque->nombre;
         $preguntas = Pregunta::whereHas('categoria.bloque', function($query) use ($bloque_id) {
             $query->where('id', $bloque_id);
         })->inRandomOrder()
-        ->limit(20)->get();
+        ->limit(30)->get();
 
-        return View('preguntas',compact('preguntas'));
+        return View('preguntas',compact('preguntas'),compact('titulo'));
 
     }
 

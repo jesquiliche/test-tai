@@ -50,9 +50,9 @@
 
 .imagen-con-texto .texto {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-55%, -50%);
   color: #fff;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
@@ -61,7 +61,7 @@
 }
 .cards-container {
   position:absolute;
-  margin-top: -180px;
+  margin-top: -170px;
   width: 325px;
 }
 footer {

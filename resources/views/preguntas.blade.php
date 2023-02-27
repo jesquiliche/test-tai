@@ -7,12 +7,19 @@
      <br/>
      <br/>
      <br/>
-     
+        <h2 class="text-center">{{$titulo}}</h2>
+        @php
+            $x=0;
+        @endphp
         @foreach($preguntas as $pregunta)
-        
-            <div class="card mt-2 col-md-6 mx-auto p-2  ">
+            @php
+                 $x++; 
+            @endphp
+          
+            <div class="card mt-2 col-md-8 mx-auto p-2">
+                
                 <div class="card-title p-2">
-                    <h6><strong>{{$pregunta->pregunta}}</strong></h6>
+                    <h6><strong>{{$x}}. {{$pregunta->pregunta}}</strong></h6>
                 </div>
             <div class="card-body p-2">
             <form>
