@@ -435,7 +435,7 @@
 
         .imagen-con-texto .texto {
             position: absolute;
-            top: 55%;
+            top: 60%;
             left: 50%;
             transform: translate(-55%, -50%);
             color: #fff;

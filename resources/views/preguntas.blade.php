@@ -38,7 +38,7 @@
                             <input type="hidden" name="correcta{{ $x }}" value="{{ $pregunta->a }}">
                         @endif
                         <br />
-                        <input type="radio" name="respuesta{{ $x }}" value="b"> b)<i>
+                        <input type="radio" name="respuesta{{ $x }}" value="b" class=><i> b)
                             {{ $pregunta->b }}</i>
                         @if ($pregunta->respuesta == 'b')
                             <input type="hidden" name="correcta{{ $x }}" value="{{ $pregunta->b }}">

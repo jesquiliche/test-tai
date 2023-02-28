@@ -55,7 +55,7 @@ class PreguntaController extends Controller
         $preguntas = Pregunta::whereHas('categoria.bloque', function($query) use ($bloque_id) {
             $query->where('id', $bloque_id);
         })->inRandomOrder()
-        ->limit(30)->get();
+        ->limit(200)->get();
 
         return View('preguntas',compact('preguntas'),compact('titulo'));
 
