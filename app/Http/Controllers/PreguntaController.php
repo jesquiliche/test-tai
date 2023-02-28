@@ -16,14 +16,15 @@ class PreguntaController extends Controller
 {
     //
 
-    public function index()
+    public function index(Request $request)
     {
         //
         $preguntas=DB::table('preguntas')
         ->inRandomOrder()
         ->limit(75)
         ->get();
-        $titulo="Test sobre todo el temario";
+
+       
         return View('preguntas',compact('preguntas'),compact('titulo'));
 
     }
