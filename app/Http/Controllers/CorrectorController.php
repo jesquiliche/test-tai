@@ -7,9 +7,13 @@ use Illuminate\Http\Request;
 class CorrectorController extends Controller
 {
     //
-    public function corregir(Request $request){
-     //   return "Hola estoy en corregir";
-        return $request;
+    public function corregir(Request $request) {
+        
+    
+        $preguntas=$request;
+     //   return $preguntas;
+        return view('corrector',compact('preguntas'));
+    
     }
 
 }

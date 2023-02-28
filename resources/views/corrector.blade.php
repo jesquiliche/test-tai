@@ -2,64 +2,49 @@
 
 @section('title', 'Página de inicio')
 
+
+
+
 @section('content')
-    <br />
-    <br />
-    <br />
-    <div class="container mx-auto mt-4 py-4">
-        <br/>
-        <h2 class="text-center">{{ $titulo }}</h2>
-        @php
-            $x = 0;
-        @endphp
-        <form action="{{route('corrector')}}" method="POST">
-        @csrf
-        @foreach ($preguntas as $pregunta)
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+  <div class="row">
+    @php
+    $data = $preguntas;
+       
+    $num_preguntas = $data->registros;
+    @endphp
+    @for ($i = 1; $i <= $num_preguntas; $i++)
+    <div class="row">
+      <div class="card col-lg-8 mt-2 mx-auto">
+        <div class="card-header">
+          <b>{{ $i }}. {{$data->{'texto'.$i} }}</b>
+        </div>
+        <div class="card-body">
+            <i>a) {{$data->{'a'.$i} }}</i><br/>
+            <i>b) {{$data->{'b'.$i} }}</i><br/>
+            <i>c) {{$data->{'c'.$i} }}</i><br/>
+            <i>d) {{$data->{'d'.$i} }}</i><br/>
+        
+            Correcta : 
             @php
-                $x++;
+                $respuesta=$data->correcta;
             @endphp
             
-                <div class="card mt-2 col-md-8 mx-auto p-3">
-
-                    <div class="card-title">
-                        <h6><strong>{{ $x }}. {{ $pregunta->pregunta }}</strong></h6>
-                    </div>
-                    <div class="card-body">
-                        <input type="hidden" name="pregunta{{$pregunta->id}}" value="{{$pregunta->id}}"";
-                        <input type="hidden" name="respuesta{{ $x }}" value="x">
-                        <input type="radio" name="respuesta{{ $x }}" value="a"> a)
-                        <i>{{ $pregunta->a }}</i>
-                        @if ($pregunta->respuesta == 'a')
-                            <b> <i class="fas fa-check"></i> Correcta</b>
-                        @endif
-                        <br />
-                        <input type="radio" name="respuesta{{ $x }}" value="b"> b)<i> {{ $pregunta->b }}</i>
-                        @if ($pregunta->respuesta == 'b')
-                            <b><i class="fas fa-check"></i> Correcta</b>
-                        @endif
-                        <br />
-                        <input type="radio" name="respuesta{{ $x }}" value="c"><i> c) {{ $pregunta->c }}</i>
-                        @if ($pregunta->respuesta == 'c')
-                            <b><i class="fas fa-check"></i> Correcta</b>
-                        @endif
-                        <br />
-                        <input type="radio" name="respuesta{{ $x }}" value="d"><i> d) {{ $pregunta->d }}</i>
-                        @if ($pregunta->respuesta == 'd')
-                            <b><i class="fas fa-check"></i> Correcta</b>
-                        @endif
-
-
-                    </div>
-            
-            
-
-        
+           
+         
+        <p> <b> Correcta: {{ $data->{'correcta'.$i} }}</b></p>
+          <p><b>Respuesta seleccionada: {{ $data->{'respuesta'.$i} }}</b></p>
+        </div>
+      </div>
     </div>
-    @endforeach
-    <div class="container col-lg-4 text-center py-2">
-        <input type="submit" class="btn btn-primary text-center">
-    </div>
-</form>
-    </div>
-
+    @endfor
+  </div>
+</div>
 @endsection
+
+
