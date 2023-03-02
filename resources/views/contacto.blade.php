@@ -13,7 +13,7 @@
      <div class="card col-lg-4 mx-auto mt-4">
         <div class="card-body">
           <h5  class="text-center">Formulario de contacto</h5>
-          <form>
+          <form class="form-floating">
             <div class="form-group">
               <label for="nombre">Nombre</label>
               <input type="text" class="form-control" id="nombre" placeholder="Introduce tu nombre">

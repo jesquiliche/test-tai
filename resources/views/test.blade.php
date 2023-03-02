@@ -18,7 +18,7 @@
                 <h5>Test por Bloque</h5>
             </div <div class="form-group">
             <label for="bloque_id">Bloque</label>
-            <select class="form-control" id="bloque_id" name="bloque_id">
+            <select class="form-select" id="bloque_id" name="bloque_id">
                 @foreach ($bloques as $bloque)
                    
                     <option value="{{ $bloque->id}}">{{$bloque->nombre}} - {{ $bloque->descripcion }}</option>
@@ -37,7 +37,7 @@
                 <h5>Test por tema</h5>
             </div <div class="form-group">
             <label for="bloque_id">Tema</label>
-            <select class="form-control" id="bloque_id" name="categoria_id">
+            <select class="form-select" id="bloque_id" name="categoria_id">
                 @foreach ($bloques as $bloque)
                     <optgroup label="{{ $bloque->nombre }}">
                         @foreach ($bloque->categorias as $categoria)
