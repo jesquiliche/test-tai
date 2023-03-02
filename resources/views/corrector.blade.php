@@ -15,7 +15,7 @@
         <div class="row">
             @php
                 $data = $preguntas;
-                
+                $aciertos=0;
                 $num_preguntas = $data->registros;
             @endphp
             @for ($i = 1; $i <= $num_preguntas; $i++)
@@ -32,13 +32,18 @@
                                 $seleccionada = $data->{'respuesta' . $i};
                                 $respuesta = $data->{'a' . $i};
                                 $correcta = $data->{'correcta' . $i};
-                                $aciertos=0;
+                                $correctaL="";
+                               
                             @endphp
                             
                             @if ($seleccionada == 'a')
                                 <i class="fas fa-arrow-left"></i><b> Seleccionada</b>
                             @endif
                             @if ($correcta == $respuesta)
+                            @php
+                                $correctaL="a";
+                            @endphp
+                                
                                 <b><i class="fas fa-check"></i> Correcta</b>
                             @endif
                             <br />
@@ -51,6 +56,9 @@
                                 <i class="fas fa-arrow-left"></i><b> Seleccionada</b>
                             @endif
                             @if ($correcta == $respuesta)
+                                @php
+                                    $correctaL="b";
+                                @endphp
                                 <b><i class="fas fa-check"></i> Correcta</b>
                             @endif
                             <br />
@@ -63,6 +71,11 @@
                                 <i class="fas fa-arrow-left"></i><b> Seleccionada</b>
                             @endif
                             @if ($correcta == $respuesta)
+                                @php
+                                    $correctaL="c";
+                                @endphp
+                                $correctaL="c";
+
                                 <b><i class="fas fa-check"></i> Correcta</b>
                             @endif
                             <br />
@@ -73,10 +86,20 @@
                             @endphp
                           
                             @if ($seleccionada == 'd')
+                                @php
+                                    $correctaL="d";
+                                @endphp
                                 <i class="fas fa-arrow-left"></i><b> Seleccionada</b>
                             @endif
                             @if ($correcta == $respuesta)
                                 <b><i class="fas fa-check"></i> Correcta</b><br />
+                            @endif
+                            
+                            @if($seleccionada==$correctaL)
+                                
+                                @php
+                                    $aciertos++;
+                                @endphp
                             @endif
 
 
@@ -85,6 +108,9 @@
                     </div>
                 </div>
             @endfor
+            <div class="card col-lg-4 py-2 mx-auto mt-4 text-center">
+            <h5><b>Aciertos : {{$aciertos}}</b></h5>
+            </div>
         </div>
     </div>
     <br />

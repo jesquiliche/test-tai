@@ -340,6 +340,50 @@
             "d": "Es la forma normal que asegura que cada atributo dependa de la clave completa y de cualquier otro atributo.",
             "respuesta": "a",
             "categoria_id": 17
-        }
-        
+        },
+        {
+            "pregunta": "¿Cuál de las siguientes operaciones de álgebra relacional devuelve tuplas que están en ambas relaciones?",
+            "a": "Intersección",
+            "b": "Unión",
+            "c": "Diferencia",
+            "d": "Producto cartesiano",
+            "respuesta": "a",
+            "categoria_id": 17
+          },
+          {
+            "pregunta": "¿Cuál de las siguientes operaciones de álgebra relacional devuelve tuplas que están en la relación de la izquierda pero no en la de la derecha?",
+            "a": "Intersección",
+            "b": "Unión",
+            "c": "Diferencia",
+            "d": "Producto cartesiano",
+            "respuesta": "c",
+            "categoria_id": 17
+          },
+          {
+            "pregunta": "¿Cuál de las siguientes operaciones de álgebra relacional devuelve tuplas que están en alguna de las dos relaciones?",
+            "a": "Intersección",
+            "b": "Unión",
+            "c": "Diferencia",
+            "d": "Producto cartesiano",
+            "respuesta": "b",
+            "categoria_id": 17
+          },
+          {
+            "pregunta": "¿Cuál de las siguientes operaciones de álgebra relacional devuelve todas las posibles combinaciones de tuplas entre las dos relaciones?",
+            "a": "Intersección",
+            "b": "Unión",
+            "c": "Diferencia",
+            "d": "Producto cartesiano",
+            "respuesta": "d",
+            "categoria_id": 17
+          },
+          {
+            "pregunta": "¿Cuál de las siguientes operaciones de álgebra relacional devuelve tuplas que están en una relación pero no en la otra, y viceversa?",
+            "a": "Intersección",
+            "b": "Unión",
+            "c": "Diferencia simétrica",
+            "d": "Producto cartesiano",
+            "respuesta": "c",
+            "categoria_id": 17
+          }   
     ]
