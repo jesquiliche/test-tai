@@ -11,8 +11,8 @@ class CorrectorController extends Controller
         
     
         $preguntas=$request;
-     //   return $preguntas;
-        return view('corrector',compact('preguntas'));
+        return $preguntas;
+     //   return view('corrector',compact('preguntas'));
     
     }
 

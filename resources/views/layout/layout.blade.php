@@ -399,7 +399,7 @@
         }
 
         .btn {
-            border-radius: 12px;
+            border-radius: 20px;
         }
 
         .btn-danger {
@@ -417,7 +417,7 @@
             box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
             border-radius: 15px;
         }
-        }
+    
 
         .fas {
             font-size: 20px;
@@ -527,8 +527,8 @@
 
                 </div>
                 <span class="navbar-text mr-3">
-                    <h5>Bienvenido <i class="fas fa-user"></i><b> {{ auth()->user()->name }}</b></h5>
-                </span>
+                
+            </span>
             </nav>
 
         </div>

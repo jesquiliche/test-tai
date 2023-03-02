@@ -109,9 +109,29 @@
                 </div>
             @endfor
             <div class="card col-lg-4 py-2 mx-auto mt-4 text-center">
-            <h5><b>Aciertos : {{$aciertos}}</b></h5>
-            </div>
-        </div>
+                <div class="card-header">
+                    <b>Resultado</b>
+                </div>
+                <div class="card-body">
+                    
+                    <p>Aciertos  {{$aciertos}} de {{$num_preguntas}}</p>
+                
+               
+            
+            @php
+                $tantoPorCiento=$aciertos*100/$num_preguntas;
+            @endphp
+            {{$tantoPorCiento}}% de aciertos
+        
+    </div>
+    <div class="container col-lg-6 mx-auto text-center">
+    
+    
+        <a href="{{route('test')}}" class="nav-link btn btn-danger">Hacer otro</a>
+    
+
+    
+
     </div>
     <br />
     <br />

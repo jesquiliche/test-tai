@@ -5,8 +5,7 @@
 @section('content')     
      <br/>
      <br/>
-     <br/>
-     
+        
      
 
      <div class="imagen-con-texto">
