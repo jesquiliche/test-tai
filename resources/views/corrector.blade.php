@@ -108,7 +108,7 @@
                     </div>
                 </div>
             @endfor
-            <div class="card col-lg-4 py-2 mx-auto mt-4 text-center">
+            <div class="card col-lg-4 py-2 mx-auto mt-4 mb-4 text-center">
                 <div class="card-header">
                     <b>Resultado</b>
                 </div>
@@ -119,7 +119,7 @@
                
             
             @php
-                $tantoPorCiento=$aciertos*100/$num_preguntas;
+                $tantoPorCiento=number_format(($aciertos*100/$num_preguntas),2);
             @endphp
             {{$tantoPorCiento}}% de aciertos
         
