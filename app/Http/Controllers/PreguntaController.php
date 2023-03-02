@@ -16,12 +16,13 @@ class PreguntaController extends Controller
 {
     //
 
-    public function index(Request $request)
+    public function general(Request $request)
     {
         //
+        $registros=$request->input('num_preguntas');
         $preguntas=DB::table('preguntas')
         ->inRandomOrder()
-        ->limit(75)
+        ->limit($registros)
         ->get();
 
         $titulo="Test General";
@@ -37,10 +38,11 @@ class PreguntaController extends Controller
         $categoria_id = $request->input('categoria_id');
         $categoria=Categoria::findOrfail($categoria_id);
         $titulo="Tema ".$categoria->nombre;
+        $registros=$request->input('num_registros');
 
         $preguntas = Pregunta::where('categoria_id',$categoria_id)
                 ->inRandomOrder()
-                ->limit(20)
+                ->limit($registros)
                 ->get();
 
         return View('preguntas',compact('preguntas'),compact('titulo'));
@@ -52,12 +54,13 @@ class PreguntaController extends Controller
         //
         $bloque_id = $request->input('bloque_id');
         $bloque=Bloque::findOrFail($bloque_id);
+        $registros=$request->input('num_registros');
 
         $titulo ="Test ".$bloque->nombre;
         $preguntas = Pregunta::whereHas('categoria.bloque', function($query) use ($bloque_id) {
             $query->where('id', $bloque_id);
         })->inRandomOrder()
-        ->limit(40)->get();
+        ->limit($registros)->get();
 
         return View('preguntas',compact('preguntas'),compact('titulo'));
 

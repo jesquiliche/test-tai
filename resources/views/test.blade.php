@@ -26,6 +26,16 @@
                 @endforeach
 
             </select>
+            <div class="form-group">
+                <label for="myListbox">Nº preguntas:</label>
+                <select class="form-select" id="myListbox" name="num_registros">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                </select>
+            </div>
+            
             <br />
             <input type="submit" class="btn btn-danger mt-2" value="Hacer test">
         </form>
@@ -35,7 +45,8 @@
             @csrf
             <div class="card-title">
                 <h5>Test por tema</h5>
-            </div <div class="form-group">
+            </div> 
+            <div class="form-group">
             <label for="bloque_id">Tema</label>
             <select class="form-select" id="bloque_id" name="categoria_id">
                 @foreach ($bloques as $bloque)
@@ -47,6 +58,17 @@
                 @endforeach
 
             </select>
+            </div>
+            <div class="form-group p-1">
+                <label for="myListbox">Nº preguntas:</label>
+                <select class="form-select" id="myListbox" name="num_registros">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    
+                </select>
+            </div>
+
             <br />
             <input type="submit" class="btn btn-danger mt-2" value="Hacer test">
         </form>
@@ -60,6 +82,21 @@
             <div class="card-body">
                 Test general.
             </div>
+            <div class="form-group p-1">
+                <label for="myListbox">Nº preguntas:</label>
+                <select class="form-select" id="myListbox" name="num_preguntas">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                    <option value="60">60</option>
+                    <option value="70">70</option>
+                    <option value="80">80</option>
+                    
+                </select>
+            </div>
+
             <br/>
             <input type="submit" class="btn btn-danger mt-2" value="Hacer test">
         </form>

@@ -30,7 +30,7 @@ Route::get('/preguntas', [App\Http\Controllers\PreguntaController::class,'index'
 Route::post('/corrector',[\App\Http\Controllers\CorrectorController::class,'corregir'])->name('corrector');
 Route::post('/preguntasbloque', [App\Http\Controllers\PreguntaController::class,'showByBloque'])->name('preguntasbloque');
 Route::post('/preguntas', [App\Http\Controllers\PreguntaController::class,'showByCategory'])->name('preguntas');
-Route::post('/preguntasgeneral', [App\Http\Controllers\PreguntaController::class,'index'])->name('preguntasgeneral');
+Route::post('/preguntasgeneral', [App\Http\Controllers\PreguntaController::class,'general'])->name('preguntasgeneral');
 Route::get('/test', [App\Http\Controllers\TestPorCateriasController::class,'index'])->name('test');
 
 
