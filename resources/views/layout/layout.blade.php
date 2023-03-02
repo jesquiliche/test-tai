@@ -415,7 +415,7 @@
 
         .card {
             box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
-            border-radius: 20px;
+            border-radius: 15px;
         }
         }
 

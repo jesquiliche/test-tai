@@ -24,6 +24,8 @@ class PreguntaController extends Controller
         ->limit(75)
         ->get();
 
+        $titulo="Test General";
+
        
         return View('preguntas',compact('preguntas'),compact('titulo'));
 
