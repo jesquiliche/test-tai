@@ -40,9 +40,9 @@
                                 <i class="fas fa-arrow-left"></i><b> Seleccionada</b>
                             @endif
                             @if ($correcta == $respuesta)
-                            @php
-                                $correctaL="a";
-                            @endphp
+                                @php
+                                    $correctaL="a";
+                                @endphp
                                 
                                 <b><i class="fas fa-check"></i> Correcta</b>
                             @endif
@@ -74,8 +74,6 @@
                                 @php
                                     $correctaL="c";
                                 @endphp
-                                $correctaL="c";
-
                                 <b><i class="fas fa-check"></i> Correcta</b>
                             @endif
                             <br />
@@ -86,12 +84,13 @@
                             @endphp
                           
                             @if ($seleccionada == 'd')
-                                @php
-                                    $correctaL="d";
-                                @endphp
                                 <i class="fas fa-arrow-left"></i><b> Seleccionada</b>
                             @endif
                             @if ($correcta == $respuesta)
+                                @php
+                                    $correctaL="d";
+                                @endphp
+                       
                                 <b><i class="fas fa-check"></i> Correcta</b><br />
                             @endif
                             
@@ -99,6 +98,7 @@
                                 
                                 @php
                                     $aciertos++;
+                                    $correctaL="X";
                                 @endphp
                             @endif
 

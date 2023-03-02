@@ -399,7 +399,18 @@
         }
 
         .btn {
-            border-radius: 20px;
+            border-radius: 12px;
+        }
+
+        .btn-danger {
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+            border-color: rgb(255, 166, 0);
+            background-color: rgb(255, 166, 0);
+        }
+        .btn-danger:hover {
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+            border-color: rgb(249, 173, 30);
+            background-color: rgb(199, 135, 15);
         }
 
         .card {

@@ -26,7 +26,7 @@
               <label for="mensaje">Mensaje</label>
               <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe tu mensaje"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary mt-2">Enviar</button>
+            <button type="submit" class="btn btn-danger mt-2">Enviar</button>
           </form>
         </div>
       </div>

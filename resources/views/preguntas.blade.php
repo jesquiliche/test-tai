@@ -66,7 +66,7 @@
             @endforeach
             <input type="number" name="registros" value="{{ $x }}">;
             <div class="container col-lg-8 text-center py-2 mt-3 mx-auto">
-                <input type="submit" class="btn btn-primary text-center" value="Corregir">
+                <input type="submit" class="btn btn-danger text-center" value="Corregir">
             </div>
         </form>
     </div>

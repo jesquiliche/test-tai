@@ -27,7 +27,7 @@
 
             </select>
             <br />
-            <input type="submit" class="btn btn-primary mt-2" value="Hacer test">
+            <input type="submit" class="btn btn-danger mt-2" value="Hacer test">
         </form>
     </div>
     <div class="card col-lg-3 mx-auto p-5">
@@ -48,7 +48,7 @@
 
             </select>
             <br />
-            <input type="submit" class="btn btn-primary mt-2" value="Hacer test">
+            <input type="submit" class="btn btn-danger mt-2" value="Hacer test">
         </form>
     </div>
     <div class="card col-lg-3  mx-auto p-5">
@@ -61,7 +61,7 @@
                 Test general.
             </div>
             <br/>
-            <input type="submit" class="btn btn-primary mt-2" value="Hacer test">
+            <input type="submit" class="btn btn-danger mt-2" value="Hacer test">
         </form>
     </div>
    
