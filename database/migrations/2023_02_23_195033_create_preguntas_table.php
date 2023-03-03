@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('d');
             $table->string('respuesta');
             $table->unsignedBigInteger('categoria_id');
+            $table->text('explicacion')->nullable();
             $table->timestamps();
 
             $table->foreign('categoria_id')
