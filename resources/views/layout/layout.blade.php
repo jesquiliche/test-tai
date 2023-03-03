@@ -420,12 +420,17 @@
     
 
         .fas {
-            font-size: 20px;
+        
+        
+            font-size: 24px;
         }
 
-        .fab {
-            font-size: 34px;
-        }
+        .nav-link:hover {
+            color:#fff;
+        
+    
+
+    }
 
         .fa-check {
             color: rgb(132, 220, 132);
@@ -433,7 +438,7 @@
 
 
         }
-        }
+        
 
         .fa-arrow-left {
             color: blue;
@@ -535,9 +540,9 @@
 <footer>
     <h5>Copyrigth Jesús Quintana Esquiliche</h5>
     <ul class="social-icons">
-        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-        <li><a href="#"><i class="fab fa-twitter-square"></i></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+        <li><a href="#"><i class="fas fa-facebook-square"></i></a></li>
+        <li><a href="#"><i class="fas fa-twitter-square"></i></i></a></li>
+        <li><a href="#"><i class="fas fa-instagram-square"></i></a></li>
     </ul>
 </footer>
 
