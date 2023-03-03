@@ -57,6 +57,7 @@
                         @endif
 
                        
+                    </div>
                 </div>
             @endforeach
             <input type="number" name="registros" value="{{ $x }}">;
