@@ -28,7 +28,7 @@
                     <div class="card-body">
                         <input type="hidden" name="pregunta{{ $x }}" value="{{ $pregunta->id }}"; <input
                             type="hidden" name="respuesta{{ $x }}" value="x">
-                        <input  type="radio" name="respuesta{{ $x }}" value="a"> a)
+                        <input type="radio" name="respuesta{{ $x }}" value="a"> a)
                         <i>{{ $pregunta->a }}</i>
                         <input type="hidden" name="a{{ $x }}" value="{{ $pregunta->a }}">
                         <input type="hidden" name="b{{ $x }}" value="{{ $pregunta->b }}">
@@ -56,7 +56,7 @@
                             <input type="hidden" name="correcta{{ $x }}" value="{{ $pregunta->d }}">
                         @endif
 
-                       
+
                     </div>
                 </div>
             @endforeach
