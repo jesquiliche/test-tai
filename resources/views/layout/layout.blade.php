@@ -520,9 +520,6 @@
                             <a class="nav-link" href='{{ route('contacto') }}'><i class="fas fa-envelope"></i>
                                 Contacto</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-id-card"></i> Sobre mi</a>
-                        </li>
                     </ul>
 
                 </div>

@@ -39,6 +39,7 @@ class PreguntaSeeder extends Seeder
                     'd'=>$obj->d,
                     'respuesta' => $obj->respuesta,
                     'categoria_id'=> $obj->categoria_id
+                  //  'explicacion'=>$obj->explicacion
                 ));
                 print $obj->pregunta."\n";
                 print "  a) ".$obj->a."\n";

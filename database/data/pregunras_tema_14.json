@@ -6,8 +6,9 @@
         "c": "Cola",
         "d": "Tabla hash",
         "respuesta": "d",
-        "categoria_id": 14
-    },
+        "categoria_id": 14,
+        "explicacion": "La tabla hash es una estructura de datos que permite acceder a sus elementos en tiempo constante, es decir, el tiempo necesario para acceder a un elemento es independiente del tamaño de la tabla. Esto se logra utilizando una función de dispersión que mapea las claves de los elementos a índices en la tabla. De esta manera, se puede acceder directamente al elemento que se busca sin necesidad de recorrer la estructura de datos en busca de él, lo que hace que la tabla hash sea una de las estructuras de datos más eficientes en cuanto a tiempo de acceso."
+        },
     {
         "pregunta": "¿Qué estructura de datos se utiliza para almacenar elementos en orden de llegada?",
         "a": "Pila",
