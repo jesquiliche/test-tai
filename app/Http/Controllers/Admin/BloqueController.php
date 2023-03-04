@@ -93,7 +93,12 @@ class BloqueController extends Controller
     public function update(Request $request, Bloque $bloque)
     {
         //
-        return view('admin.bloques.update',compact('bloque'));
+        $validatedData = $request->validate([
+            'nombre' => 'required|max:255',
+            'descripcion' => 'required',
+        ]);
+        $bloque->update($request->all());
+        return redirect()->route('admin.bloque.index');
     }
 
     /**
