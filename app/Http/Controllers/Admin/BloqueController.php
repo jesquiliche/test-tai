@@ -41,7 +41,7 @@ class BloqueController extends Controller
     public function store(Request $request)
     {
         //
-        return view('admin.bloques.store',compact('bloque'));
+        return view('admin.bloques.store');
     }
 
     /**
@@ -89,7 +89,7 @@ class BloqueController extends Controller
      */
     public function destroy(Bloque $bloque)
     {
-        return view('admin.bloques.destroy',compact('bloqque'));
+        return view('admin.bloques.destroy',compact('bloque'));
         //
     }
 }

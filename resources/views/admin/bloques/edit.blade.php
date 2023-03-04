@@ -3,11 +3,16 @@
 @section('title', 'Tablero')
 
 @section('content_header')
-    <h1>Mostrar create Bloques</h1>
+    <h1>Lista de Bloques</h1>
 @stop
 
 @section('content')
-    <h1>Mostrar Create</h1>
+    <h1>Mostrar Edit</h1>
+ 
+
+
+    
+        
 @stop
 
 @section('css')

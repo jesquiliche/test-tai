@@ -321,7 +321,7 @@ return [
         [
             'text' => 'Bloques',
             'route'  => 'admin.bloque.index',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-layer-group',
         ],
         [
             'text' => 'change_password',
