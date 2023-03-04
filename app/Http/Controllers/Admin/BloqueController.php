@@ -109,7 +109,8 @@ class BloqueController extends Controller
      */
     public function destroy(Bloque $bloque)
     {
-        return view('admin.bloques.destroy',compact('bloque'));
+        $bloque->delete();
+        return redirect()->route('admin.bloque.index');
         //
     }
 }
