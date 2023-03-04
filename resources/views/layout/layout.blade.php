@@ -525,6 +525,10 @@
                             <a class="nav-link" href='{{ route('contacto') }}'><i class="fas fa-envelope"></i>
                                 Contacto</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href='/admin'><i class="fas fa-laptop"></i>
+                                Administrador</a>
+                        </li>
                     </ul>
 
                 </div>
