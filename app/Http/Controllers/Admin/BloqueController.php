@@ -40,8 +40,23 @@ class BloqueController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        return view('admin.bloques.store');
+        $validatedData = $request->validate([
+            'nombre' => 'required|max:255',
+            'descripcion' => 'required',
+        ]);
+
+        // Crear una nueva instancia del modelo Post
+        $bloque = new Bloque();
+
+        // Asignar los valores recibidos en el formulario
+        $bloque->nombre = $validatedData['nombre'];
+        $bloque->descripcion = $validatedData['descripcion'];
+
+        // Guardar el nuevo post en la base de datos
+        $bloque->save();
+
+        // Redirigir al usuario a la página de detalle del post recién creado
+        return redirect()->route('admin.bloque.index');
     }
 
     /**
