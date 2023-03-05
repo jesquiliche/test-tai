@@ -62,7 +62,18 @@
 @stop
 
 @section('js')
-    <script>
-        console.log('Hi!');
-    </script>
+<script>
+
+    // Agregar confirmación antes de enviar solicitud de eliminación
+    const deleteButtons = document.querySelectorAll('.btn-danger');
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            const confirmDelete = confirm('Esta apunto de borrar todas las categorias y preguntas asociadas a este bloque ¿Estás seguro que deseas eliminar este bloque?');
+            if (confirmDelete) {
+                event.target.closest('form').submit();
+            }
+        });
+    });
+</script>
 @stop
